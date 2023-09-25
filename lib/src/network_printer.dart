@@ -19,7 +19,7 @@ class PrinterNetworkManager {
   }
 
   Future<PosPrintResult> connect(
-      {Duration? timeout: const Duration(seconds: 5)}) async {
+      {Duration? timeout = const Duration(seconds: 5)}) async {
     try {
       _socket = await Socket.connect(_host, _port, timeout: _timeout);
       _isConnected = true;
